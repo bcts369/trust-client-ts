@@ -2,7 +2,11 @@
   "name": "@lcnem/trust",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "karma start"
   },
@@ -25,6 +29,6 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "cosmos-client-ts": "^0.1.2"
+    "cosmos-client-ts": "^0.1.4"
   }
 }
