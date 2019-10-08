@@ -9,7 +9,7 @@ $ npm i --save cosmos-client-ts
 ```
 
 ## GetScores
-`GET` `/{address}/scores?topic-ids={topic-ids}`
+`GET` `/score/{address}?topic-ids={topic-ids}`
 
 ### Request
 
