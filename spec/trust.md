@@ -8,7 +8,7 @@ $ npm i --save cosmos-client-ts
 
 ## GetScores
 
-`GET` `/trust/score/{address}`
+`GET` `/trust/scores/{address}`
 
 ### Request
 
