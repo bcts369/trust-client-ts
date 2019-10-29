@@ -5,32 +5,9 @@ import { DistributeByScoreReq } from "./types/distribute-by-score-req";
 import { DistributeByEvaluationReq } from "./types/distribute-by-evaluation-req";
 
 export module Trust {
-  /*
 
-## GetScores
-
-`GET` `/trust/scores/{address}`
-
-### Request
-
-```TypeScript
-{
-  topic_ids: string[];
-}
-```
-
-`topic-ids`: `,`で区切った`topic-id`。`^[a-z]([a-z]|-)*$`
-
-### Response
-
-```TypeScript
-{ [topicID: string]: number; }
-```
-
-Goで言うところの`map[string]float64`。
-  */
   export function getScores(sdk: CosmosSDK, address: string, topicIDs: string[]) {
-    return sdk.get(`/trust/scores/${address}`, { 'topic-ids': topicIDs.join(',') })
+    return sdk.get<{ [topicID: string]: number }>(`/trust/scores/${address}`, { 'topic-ids': topicIDs.join(',') })
   }
 
   export function evaluate(sdk: CosmosSDK, address: string, params: EvaluateReq) {
