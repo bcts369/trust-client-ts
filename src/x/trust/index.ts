@@ -10,15 +10,15 @@ export module Trust {
     return sdk.get<{ [topicID: string]: number }>(`/trust/scores/${address}`, { 'topic-ids': topicIDs.join(',') })
   }
 
-  export function evaluate(sdk: CosmosSDK, address: string, params: EvaluateReq) {
-    return sdk.post<StdTx>(`/trust/evaluate/${address}`, params);
+  export function evaluate(sdk: CosmosSDK, params: EvaluateReq) {
+    return sdk.post<StdTx>(`/trust/evaluate}`, params);
   }
 
-  export function distributeByScore(sdk: CosmosSDK, address: string, params: DistributeByScoreReq) {
-    return sdk.post<StdTx>(`/trust/distribute-by-score/${address}`, params);
+  export function distributeByScore(sdk: CosmosSDK, params: DistributeByScoreReq) {
+    return sdk.post<StdTx>(`/trust/distribute-by-score`, params);
   }
 
-  export function distributeByEvaluation(sdk: CosmosSDK, address: string, params: DistributeByEvaluationReq) {
-    return sdk.post<StdTx>(`/trust/distribute-by-evaluation/${address}`, params);
+  export function distributeByEvaluation(sdk: CosmosSDK, params: DistributeByEvaluationReq) {
+    return sdk.post<StdTx>(`/trust/distribute-by-evaluation`, params);
   }
 }
