@@ -11,14 +11,14 @@ export module Trust {
   }
 
   export function evaluate(sdk: CosmosSDK, params: EvaluateReq) {
-    return sdk.post<StdTx>(`/trust/evaluate}`, params);
+    return sdk.post<StdTx>(`/trust/evaluate}`, JSON.stringify(params));
   }
 
   export function distributeByScore(sdk: CosmosSDK, params: DistributeByScoreReq) {
-    return sdk.post<StdTx>(`/trust/distribute-by-score`, params);
+    return sdk.post<StdTx>(`/trust/distribute-by-score`, JSON.stringify(params));
   }
 
   export function distributeByEvaluation(sdk: CosmosSDK, params: DistributeByEvaluationReq) {
-    return sdk.post<StdTx>(`/trust/distribute-by-evaluation`, params);
+    return sdk.post<StdTx>(`/trust/distribute-by-evaluation`, JSON.stringify(params));
   }
 }
